@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory game</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script defer type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <section class="main">
+    <div class="container">
+      <h1>Игра в пары</h1>
+      <a href="#" class="start" id="start">Начать игру</a>
+    </div>
+
+    <div class="container">
+      <h1>Выберите поле</h1>
+      <ul class="board-list" id="board-list">
+        <li>
+          <button class="board-btn" data-time="40" data-card="16">
+            4 на 4
+          </button>
+        </li>
+        <li>
+          <button class="board-btn" data-time="70" data-card="24">
+            4 на 6
+          </button>
+        </li>
+        <li>
+          <button class="board-btn" data-time="100" data-card="32">
+            4 на 8
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h3><span id="time">Осталось 00:00</span></h3>
+      <div class="game" id="game"></div>
+      <button class="again-btn">Сыграть ещё раз</button>
+    </div>
+  </section>
+
+</body>
+
+</html>

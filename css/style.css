@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+image {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  background-color: #a399b2;
+  background-image: linear-gradient(147deg, #a399b2 0%, #4d4855 74%);
+}
+
+a:hover {
+  color: #42113c;
+}
+
+.start {
+  font-size: 2.5rem;
+}
+
+h1 {
+  padding: 0 25px;
+  line-height: 1.4;
+  font-size: 5rem;
+}
+
+.container.up {
+  margin-top: -100vh;
+}
+
+.board-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.board-list li {
+  margin: 10px;
+}
+
+.board-btn {
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.board-btn:hover {
+  border: 2px solid #42113c;
+  color: #42113c;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 800px;
+  max-height: 650px;
+  background: linear-gradient(147deg, #7d7588 0%, #333038 74%);
+  box-shadow: -8px -8px 15px #27313d, 10px 7px 15px #4b5764;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 125px;
+  margin: 10px;
+  background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+    linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-color: #954ef1;
+  color: transparent;
+  font-size: 42px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, transform .3s ease-in-out;
+  cursor: pointer;
+}
+
+.card.open {
+  background: transparent;
+  background-color: #b990f0;
+  color: rgb(27, 10, 43);
+  transform: rotateY(360deg);
+}
+
+.card.success {
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  color: white;
+  transform: scale(0.95);
+}
+
+.hide {
+  opacity: 0;
+}
+
+.again-btn {
+  margin: 10px;
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  border-radius: 15px;
+  color: #fff;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.again-btn.active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.again-btn.active:hover {
+  border: 2px solid #42113c;
+  color: #42113c;
+}
